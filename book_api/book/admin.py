@@ -8,10 +8,12 @@ class BookInline(admin.TabularInline):
     fields = ["title", "author", "page"]
     extra = 0
 
+
 class BookSubjectAdmin(admin.ModelAdmin):
-    fieldsets= [
+    fieldsets = [
         ("Name", {"fields": ["name"]}),
     ]
-    inlines=[BookInline]
+    inlines = [BookInline]
+
 
 admin.site.register(BookSubject, BookSubjectAdmin)

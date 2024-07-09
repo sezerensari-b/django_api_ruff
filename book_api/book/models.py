@@ -1,12 +1,14 @@
 from django.db import models
 from django.core.validators import MaxValueValidator
 
+
 class BookSubject(models.Model):
-    name= models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
-    
+
+
 class Book(models.Model):
     title = models.CharField(max_length=180, unique=True)
     author = models.CharField(max_length=100)
@@ -15,5 +17,3 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
-
-

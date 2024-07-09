@@ -2,3 +2,4 @@ django
 django-rest-framework
 drf_yasg
 setuptools
+pre-commit
